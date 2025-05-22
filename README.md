@@ -4,9 +4,9 @@
 
 * discovery-server -> https://github.com/OrganizacionIronHack/discovery-server.git
 
-* kite-service ->
+* kite-service -> https://github.com/OrganizacionIronHack/kite-service.git
 
-* person-service ->
+* person-service -> 
 
 ## Diagrama UML
 
