@@ -6,11 +6,11 @@ https://trello.com/b/D2C2W1lb/kite-manager-microservices
 
 ## Links al resto de repositorios
 
-* discovery-server -> https://github.com/OrganizacionIronHack/discovery-server.git
+* discovery-server -> https://github.com/Kite-manager-final-project/discovery-server.git
 
-* kite-service -> https://github.com/OrganizacionIronHack/kite-service.git
+* kite-service -> https://github.com/Kite-manager-final-project/kite-service.git
 
-* person-service -> 
+* person-service -> https://github.com/Kite-manager-final-project/person-sevice.git
 
 ## Diagrama UML
 
