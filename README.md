@@ -1,5 +1,9 @@
 # Kite manager con microservicios
 
+## Mi tablero de Trello
+
+https://trello.com/b/D2C2W1lb/kite-manager-microservices
+
 ## Links al resto de repositorios
 
 * discovery-server -> https://github.com/OrganizacionIronHack/discovery-server.git
