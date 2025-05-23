@@ -40,7 +40,8 @@ Kite "*" o-- "1" Person
 @enduml
 ```
 
-![img.png](img.png)
+
+![img_1.png](img_1.png)
 
 
 NOTA: Pese a que en el diagrama UML se aprecia que en la clase Kite el owner es una Person, A la hora de desarrollar el proyecto y
