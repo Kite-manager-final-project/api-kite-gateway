@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class GateWayConfig {
 
-    //todo: indicar las rutas correctas para que se gestionen bien las peticiones
     @Bean
     public RouteLocator customeRouteLocator(RouteLocatorBuilder builder){
         return builder.routes()
