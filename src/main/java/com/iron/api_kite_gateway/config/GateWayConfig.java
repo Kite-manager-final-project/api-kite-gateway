@@ -12,12 +12,10 @@ public class GateWayConfig {
     @Bean
     public RouteLocator customeRouteLocator(RouteLocatorBuilder builder){
         return builder.routes()
-                .route("grades", r -> r.path("/api/grades")
-                        .uri("lb://grades-data-service"))
-                .route("student", r -> r.path("/api/student/**")
-                        .uri("lb://student-info-service"))
-                .route("courses", r -> r.path("/api/course/**")
-                        .uri("lb://grades-data-service")
+                .route("kites", r -> r.path("/api/kite/**")
+                        .uri("lb://kite-service"))
+                .route("persons", r -> r.path("/api/person/**")
+                        .uri("lb://person-service")
                 ).build();
     }
 }
