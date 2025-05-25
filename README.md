@@ -84,3 +84,58 @@ Tenemos estás APIs con sus respectivos puertos.
 
 En resumen, discovery-server toma el rol de servidor, api-kite-gateway toma el rol de intermediario, y tanto kite-service como person-service
 toman el rol de clientes.
+
+## DEMOs
+
+A continuación, las siguientes capturas de pantalla es de como se comporta la aplicación en sí. Voy a mostrar algunos ejemplos.
+
+### Request persons
+
+En cada petición, donde es necesario realizar validaciones. En caso de que algo falle, en postman aparecerá el mensaje de error para que
+el usuario sepa lo que esta succediendo.
+
+Los posibles fallos son que la persona no existe (HTTP_STATUS.NOT_FOUND (404)) o que intento crear una persona con un nickname ya existente
+(HTTP_STATUS.CONFLICT (409))
+
+#### Busqueda de todas las personas (GET)
+
+![img_3.png](img_3.png)
+
+#### Búsqueda de una persona por nickName (GET)
+
+Por ejemplo, aquí voy a buscar una persona que no existe, para mostrar un mensaje de error. En caso contrario, mostraría la persona con todos
+los campos.
+
+![img_4.png](img_4.png)
+
+#### Crear una nueva persona (POST)
+
+Aquí voy a crear una nueva persona, si le especifico un nickName que ya existe, devuelve un HTTP_STATUS.CONFLICT (409) junto con el mensaje de
+error.
+
+![img_5.png](img_5.png)
+
+Para que me cree esa persona, voy a asignarle como nickName debugger
+
+#### Modificar una persona (PUT)
+
+Aquí hay que especificar todos los campos, salvo el nickName. Si le paso un nickName no existente, devuelve un HTTP_STATUS.NOT_FOUND (404)
+El nickName es el parámetro que le paso en la ruta (Path Variable)
+
+#### Modificar correo electrónico (PATCH)
+
+Dado el nickName, le paso la nueva dirección de correo para modificarla, falla si le mando un nickName no existente.
+
+![img_6.png](img_6.png)
+
+#### Modificar el número de teléfono (PATCH)
+
+Dado el nickName, le paso el número de teléfono para modificarlo, falla si le mando un nickName no existente.
+
+![img_7.png](img_7.png)
+
+#### Eliminar a una persona (DELETE)
+
+Dado el nickname, si existe esa persona, la elimina y devuelve un mensaje de confirmación. En caso contrario, devuelve un mensaje de error.
+
+![img_8.png](img_8.png)
