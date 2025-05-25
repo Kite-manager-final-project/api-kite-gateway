@@ -139,3 +139,81 @@ Dado el nickName, le paso el número de teléfono para modificarlo, falla si le 
 Dado el nickname, si existe esa persona, la elimina y devuelve un mensaje de confirmación. En caso contrario, devuelve un mensaje de error.
 
 ![img_8.png](img_8.png)
+
+### Request kites
+
+Aquí, voy a poner algunas demos de los endpoints que hace llamadas a la API de cometas mediante el gateway
+
+#### Búsqueda de varias cometas (GET)
+
+En este ejemplo, muestro todas las cometas. Si se desea filtrar, o bien, por ubicación, o bien, por dueño, o bien, por ambas.
+Saldrían las cometas que cumplan ese filtro. Además de las cometas en sí, me sale también la persona propietaria con todos los campos
+
+Por ejemplo, busco las cometas que tenga hombre_de_la_rae
+
+![img_9.png](img_9.png)
+
+Ahora busco las cometas que se estén usando en Madrid
+
+![img_10.png](img_10.png)
+
+Busco todas las cometas que se estén usando en Madrid y sean de hombre_de_la_rae
+
+![img_11.png](img_11.png)
+
+#### Búsqueda de cometa por ID (GET)
+
+En este caso, busco una cometa en particular por ID, si lo encuentra, me sale la cometa en sí y su propietario. En caso contrario,
+sale un mensaje de error de que no existe.
+
+En este ejemplo, le paso un ID que no existe
+
+![img_12.png](img_12.png)
+
+#### Nueva cometa (POST)
+
+Aquí creo una nueva cometa, y me aseguro que el owner existe en la base de datos de personas, ya que si le paso un nickname que no existe, no
+la va a crear.
+
+Pruebo a pasarle un nickName que no existe
+
+![img_13.png](img_13.png)
+
+Voy a hacer a misma petición, pero pasándole como ownwer auronplay para que me la cree correctamente.
+
+
+#### Modificar cometa (PUT)
+
+Aquí permite modificar varios campos de la cometa, garantizo que el owner no se pueda cambiar. Partiendo de esta tabla
+
+![img_14.png](img_14.png)
+
+Voy a intentar modificar la 17 cambiándole el owner
+
+![img_15.png](img_15.png)
+
+Para que me lo actualice correctamente, voy a pasarle como owner auronplay.
+
+
+#### Modificar el viento requerido de una cometa (PATCH)
+
+Dado el id, le modifico el viento requerido a una cometa, si no encuentra ese ID, devuelve NOT_FOUND y el mensaje de error correspondiente.
+
+![img_16.png](img_16.png)
+
+#### Modificar la ubicación (PATCH)
+
+Dado el id, le modifico la ubicación a una cometa, si no encuentra ese ID, devuelve NOT_FOUND y el mensaje de error correspondiente.
+
+![img_17.png](img_17.png)
+
+#### Eliminar una cometa (DELETE)
+
+Dado el id, elimino la cometa. Si existía, devuelve un mensaje de confirmación de que se ha eliminado correctamente.
+En caso contrario, devuelve un mensaje de error indicando de que no existe ninguna cometa con ese ID.
+
+![img_18.png](img_18.png)
+
+Si vuelvo a mandar la misma petición, me saldrá el mensaje de error porque ya no existe.
+
+![img_19.png](img_19.png)
