@@ -1,5 +1,9 @@
 # Kite manager con microservicios
 
+## Presentación Canva
+
+https://www.canva.com/design/DAGnVvLkai8/cfejTn0jg6HY0nOd8G5iuQ/edit
+
 ## Mi tablero de Trello
 
 https://trello.com/b/D2C2W1lb/kite-manager-microservices
