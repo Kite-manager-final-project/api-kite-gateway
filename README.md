@@ -2,7 +2,7 @@
 
 ## Presentación Canva
 
-https://www.canva.com/design/DAGnVvLkai8/cfejTn0jg6HY0nOd8G5iuQ/edit
+https://www.canva.cmvn clean packageom/design/DAGnVvLkai8/cfejTn0jg6HY0nOd8G5iuQ/edit
 
 ## Mi tablero de Trello
 
@@ -45,7 +45,7 @@ Kite "*" o-- "1" Person
 ```
 
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 
 NOTA: Pese a que en el diagrama UML se aprecia que en la clase Kite el owner es una Person, A la hora de desarrollar el proyecto y
@@ -60,11 +60,11 @@ Al tratarse de un microservicio, las bases de datos están separadas, por lo tan
 
 * person_micro (tabla persons)
 
-![img.png](img.png)
+![img.png](img/img.png)
 
 * kite_micro (tabla kites)
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 Como se aprecia, en la tabla de cometas hay una referencia al dueño, concretamente, la columna owner, sin embargo, no es ninguna clave foránea.
 Simplemente, es de tipo ```varchar```.
@@ -103,21 +103,21 @@ Los posibles fallos son que la persona no existe (HTTP_STATUS.NOT_FOUND (404)) o
 
 #### Busqueda de todas las personas (GET)
 
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 #### Búsqueda de una persona por nickName (GET)
 
 Por ejemplo, aquí voy a buscar una persona que no existe, para mostrar un mensaje de error. En caso contrario, mostraría la persona con todos
 los campos.
 
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
 
 #### Crear una nueva persona (POST)
 
 Aquí voy a crear una nueva persona, si le especifico un nickName que ya existe, devuelve un HTTP_STATUS.CONFLICT (409) junto con el mensaje de
 error.
 
-![img_5.png](img_5.png)
+![img_5.png](img/img_5.png)
 
 Para que me cree esa persona, voy a asignarle como nickName debugger
 
@@ -130,19 +130,19 @@ El nickName es el parámetro que le paso en la ruta (Path Variable)
 
 Dado el nickName, le paso la nueva dirección de correo para modificarla, falla si le mando un nickName no existente.
 
-![img_6.png](img_6.png)
+![img_6.png](img/img_6.png)
 
 #### Modificar el número de teléfono (PATCH)
 
 Dado el nickName, le paso el número de teléfono para modificarlo, falla si le mando un nickName no existente.
 
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 #### Eliminar a una persona (DELETE)
 
 Dado el nickname, si existe esa persona, la elimina y devuelve un mensaje de confirmación. En caso contrario, devuelve un mensaje de error.
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 ### Request kites
 
@@ -155,15 +155,15 @@ Saldrían las cometas que cumplan ese filtro. Además de las cometas en sí, me 
 
 Por ejemplo, busco las cometas que tenga hombre_de_la_rae
 
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 
 Ahora busco las cometas que se estén usando en Madrid
 
-![img_10.png](img_10.png)
+![img_10.png](img/img_10.png)
 
 Busco todas las cometas que se estén usando en Madrid y sean de hombre_de_la_rae
 
-![img_11.png](img_11.png)
+![img_11.png](img/img_11.png)
 
 #### Búsqueda de cometa por ID (GET)
 
@@ -172,7 +172,7 @@ sale un mensaje de error de que no existe.
 
 En este ejemplo, le paso un ID que no existe
 
-![img_12.png](img_12.png)
+![img_12.png](img/img_12.png)
 
 #### Nueva cometa (POST)
 
@@ -181,7 +181,7 @@ la va a crear.
 
 Pruebo a pasarle un nickName que no existe
 
-![img_13.png](img_13.png)
+![img_13.png](img/img_13.png)
 
 Voy a hacer a misma petición, pero pasándole como ownwer auronplay para que me la cree correctamente.
 
@@ -190,11 +190,11 @@ Voy a hacer a misma petición, pero pasándole como ownwer auronplay para que me
 
 Aquí permite modificar varios campos de la cometa, garantizo que el owner no se pueda cambiar. Partiendo de esta tabla
 
-![img_14.png](img_14.png)
+![img_14.png](img/img_14.png)
 
 Voy a intentar modificar la 17 cambiándole el owner
 
-![img_15.png](img_15.png)
+![img_15.png](img/img_15.png)
 
 Para que me lo actualice correctamente, voy a pasarle como owner auronplay.
 
@@ -203,21 +203,21 @@ Para que me lo actualice correctamente, voy a pasarle como owner auronplay.
 
 Dado el id, le modifico el viento requerido a una cometa, si no encuentra ese ID, devuelve NOT_FOUND y el mensaje de error correspondiente.
 
-![img_16.png](img_16.png)
+![img_16.png](img/img_16.png)
 
 #### Modificar la ubicación (PATCH)
 
 Dado el id, le modifico la ubicación a una cometa, si no encuentra ese ID, devuelve NOT_FOUND y el mensaje de error correspondiente.
 
-![img_17.png](img_17.png)
+![img_17.png](img/img_17.png)
 
 #### Eliminar una cometa (DELETE)
 
 Dado el id, elimino la cometa. Si existía, devuelve un mensaje de confirmación de que se ha eliminado correctamente.
 En caso contrario, devuelve un mensaje de error indicando de que no existe ninguna cometa con ese ID.
 
-![img_18.png](img_18.png)
+![img_18.png](img/img_18.png)
 
 Si vuelvo a mandar la misma petición, me saldrá el mensaje de error porque ya no existe.
 
-![img_19.png](img_19.png)
+![img_19.png](img/img_19.png)
