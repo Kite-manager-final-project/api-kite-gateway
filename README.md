@@ -2,7 +2,7 @@
 
 ## Presentación Canva
 
-https://www.canva.cmvn clean packageom/design/DAGnVvLkai8/cfejTn0jg6HY0nOd8G5iuQ/edit
+[https://www.canva.cmvn clean packageom/design/DAGnVvLkai8/cfejTn0jg6HY0nOd8G5iuQ/edit](https://www.canva.com/design/DAGnVvLkai8/cfejTn0jg6HY0nOd8G5iuQ/edit)
 
 ## Mi tablero de Trello
 
